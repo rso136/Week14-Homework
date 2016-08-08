@@ -8,16 +8,10 @@ var source = {
         user: 'root',
         password: "orangegit12",
         database: "burgers_db"
-    },
-
-    jawsDB: {
-        port: 3306,
-        host: 'gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        user: 'e45xumklps1v6wwp',
-        password: "q6aah0uz6okkefd0",
-        database: "vqxkpdc82ckq29lm" 
     }
 }
+
+var connection = mysql.createConnection(process.env.JAWSDB_URL || source.localhost);
 
 connection.connect(function (err) {
 	if (err) {
